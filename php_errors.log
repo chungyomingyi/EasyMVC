@@ -1,0 +1,36 @@
+[22-Jul-2016 01:33:18 UTC] PHP Warning:  require_once(core/App.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/EasyMVC/views/index.php on line 3
+[22-Jul-2016 01:33:18 UTC] PHP Stack trace:
+[22-Jul-2016 01:33:18 UTC] PHP   1. {main}() /home/ubuntu/workspace/EasyMVC/views/index.php:0
+[22-Jul-2016 01:33:18 UTC] PHP Fatal error:  require_once(): Failed opening required 'core/App.php' (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/EasyMVC/views/index.php on line 3
+[22-Jul-2016 01:33:18 UTC] PHP Stack trace:
+[22-Jul-2016 01:33:18 UTC] PHP   1. {main}() /home/ubuntu/workspace/EasyMVC/views/index.php:0
+[22-Jul-2016 01:33:56 UTC] PHP Warning:  require_once(core/App.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/EasyMVC/views/index.php on line 3
+[22-Jul-2016 01:33:56 UTC] PHP Stack trace:
+[22-Jul-2016 01:33:56 UTC] PHP   1. {main}() /home/ubuntu/workspace/EasyMVC/views/index.php:0
+[22-Jul-2016 01:33:56 UTC] PHP Fatal error:  require_once(): Failed opening required 'core/App.php' (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/EasyMVC/views/index.php on line 3
+[22-Jul-2016 01:33:56 UTC] PHP Stack trace:
+[22-Jul-2016 01:33:56 UTC] PHP   1. {main}() /home/ubuntu/workspace/EasyMVC/views/index.php:0
+[22-Jul-2016 01:34:42 UTC] PHP Warning:  require_once(core/App.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/EasyMVC/views/index.php on line 3
+[22-Jul-2016 01:34:42 UTC] PHP Stack trace:
+[22-Jul-2016 01:34:42 UTC] PHP   1. {main}() /home/ubuntu/workspace/EasyMVC/views/index.php:0
+[22-Jul-2016 01:34:42 UTC] PHP Fatal error:  require_once(): Failed opening required 'core/App.php' (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/EasyMVC/views/index.php on line 3
+[22-Jul-2016 01:34:42 UTC] PHP Stack trace:
+[22-Jul-2016 01:34:42 UTC] PHP   1. {main}() /home/ubuntu/workspace/EasyMVC/views/index.php:0
+[22-Jul-2016 03:50:33 UTC] PHP Warning:  require_once(head_data.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/EasyMVC/views/indexPage.php on line 6
+[22-Jul-2016 03:50:33 UTC] PHP Stack trace:
+[22-Jul-2016 03:50:33 UTC] PHP   1. {main}() /home/ubuntu/workspace/EasyMVC/views/indexPage.php:0
+[22-Jul-2016 03:50:33 UTC] PHP Fatal error:  require_once(): Failed opening required 'head_data.php' (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/EasyMVC/views/indexPage.php on line 6
+[22-Jul-2016 03:50:33 UTC] PHP Stack trace:
+[22-Jul-2016 03:50:33 UTC] PHP   1. {main}() /home/ubuntu/workspace/EasyMVC/views/indexPage.php:0
+[22-Jul-2016 03:50:56 UTC] PHP Warning:  require_once(menu_top.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/EasyMVC/views/indexPage.php on line 28
+[22-Jul-2016 03:50:56 UTC] PHP Stack trace:
+[22-Jul-2016 03:50:56 UTC] PHP   1. {main}() /home/ubuntu/workspace/EasyMVC/views/indexPage.php:0
+[22-Jul-2016 03:50:56 UTC] PHP Fatal error:  require_once(): Failed opening required 'menu_top.php' (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/EasyMVC/views/indexPage.php on line 28
+[22-Jul-2016 03:50:56 UTC] PHP Stack trace:
+[22-Jul-2016 03:50:56 UTC] PHP   1. {main}() /home/ubuntu/workspace/EasyMVC/views/indexPage.php:0
+[22-Jul-2016 03:51:11 UTC] PHP Warning:  require_once(menu_bottom.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/EasyMVC/views/indexPage.php on line 49
+[22-Jul-2016 03:51:11 UTC] PHP Stack trace:
+[22-Jul-2016 03:51:11 UTC] PHP   1. {main}() /home/ubuntu/workspace/EasyMVC/views/indexPage.php:0
+[22-Jul-2016 03:51:11 UTC] PHP Fatal error:  require_once(): Failed opening required 'menu_bottom.php' (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/EasyMVC/views/indexPage.php on line 49
+[22-Jul-2016 03:51:11 UTC] PHP Stack trace:
+[22-Jul-2016 03:51:11 UTC] PHP   1. {main}() /home/ubuntu/workspace/EasyMVC/views/indexPage.php:0
