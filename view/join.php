@@ -1,24 +1,23 @@
 <html>
-  <head>
+<head>
     <title>CBTwheels</title>
     <?php require_once("head_data.php"); ?>
-    		
-  </head>
-  
-  <body>
-    <div class="top_bg">
-    	<div class="container">
-    		<div class="header_top-sec">
-    			<div class="top_right">
-    				<ul>
-    					<li><a href="contact">Contact</a></li>|
-    					<li><a href="login">My Account</a></li>
-    				</ul>
-    			</div>
-    				<div class="clearfix"> </div>
-    		</div>
-    	</div>
+</head>
+
+<body>
+<div class="top_bg">
+    <div class="container">
+        <div class="header_top-sec">
+            <div class="top_right">
+            <ul>
+                <li><a href="contact">Contact</a></li>|
+                <li><a href="login">My Account</a></li>
+            </ul>
+            </div>
+        <div class="clearfix"> </div>
+        </div>
     </div>
+</div>
 <!--載入上層選項-->
 <?php require_once("menu_top.php"); ?>
 <div class="container">
@@ -95,10 +94,10 @@
         </tr>
       </table>
     </form>
+            </div>
+        </div>
     </div>
-    </div>
-    </div>
-  </div>
+</div>
   <?php require_once("menu_bottom.php"); ?>		
   </body>
 </html>

@@ -1,21 +1,22 @@
 <?php
-
-
 class loginController extends Controller{
+    
     function login(){
-        $account = $_POST["account"];
+       $this -> models("checkpwd") ; //呼叫models裡的checkpwd.php
+       
+       $result = $this->models("checkpwd");
+   
+       
     	if (trim($account) != "")
     	{
-    		setcookie("account", $account);
-    		if (isset($_COOKIE["lastPage"]))
-    		  header(sprintf("Location: %s", $_COOKIE["lastPage"]));
+    		$_SESSION("account", $account);
+    		if (isset($_SESSION["lastPage"]))
+    		  header(sprintf("Location: %s", $_SESSION["lastPage"]));
     		else
     		   header("Location: index");
     		exit();
     	}
-    
     }
-    
     
 }
 

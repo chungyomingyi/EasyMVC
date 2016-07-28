@@ -1,9 +1,4 @@
-<?php  
-        if (isset($_COOKIE["account"]))
-          $account = $_COOKIE["account"];
-        else 
-          $account = "Guest";
-?>
+
 <html>
 <head>
 <title>CBTwheels</title>
@@ -17,10 +12,10 @@
 			<div class="top_right">
 				<ul>
 					<li><a href="contact">Contact</a></li>|
-					<?php if ($account == "Guest"): ?>
+					<?php if ($data["account"] == "Guest"): ?>
 					<li><a href="login">Login</a></li>
 					<?php else: ?>
-					<li><a href="login.php?logout=1"><?php echo $account ?> logout</a></li>
+					<li><a href="login.php?logout=1"><?php echo $data["account"] ?> logout</a></li>
 					<?php endif; ?>
 				</ul>
 			</div>

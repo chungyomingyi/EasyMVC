@@ -23,8 +23,7 @@
   $result = execute_sql($link, "member", $sql);
 
   //如果帳號已經有人使用
-  if (mysqli_num_rows($result) != 0)
-  {
+  if (mysqli_num_rows($result) != 0)  {
     //釋放 $result 佔用的記憶體
     mysqli_free_result($result);
 		
@@ -33,11 +32,7 @@
     echo "alert('您所指定的帳號已經有人使用，請使用其它帳號');";
     echo "history.back();";
     echo "</script>";
-  }
-	
-  //如果帳號沒人使用
-  else
-  {
+  }else { //如果帳號沒人使用
     //釋放 $result 佔用的記憶體	
     mysqli_free_result($result);
 		

@@ -1,6 +1,6 @@
 <?php
-
 class Dbtools extends Controller{
+  
   function create_connection()
   {
     $link = mysqli_connect("localhost", "root", "")
