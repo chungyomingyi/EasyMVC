@@ -1,7 +1,5 @@
 <?php
-
 class HomeController extends Controller {
-    
     //判斷登入/登出
     function session_login_out(){
         if(isset($_SESSION["account"])){
@@ -9,7 +7,6 @@ class HomeController extends Controller {
         }else{
             $account = "Guest";
         }
-        
         $data = $account;
         return $data;
         
@@ -35,6 +32,7 @@ class HomeController extends Controller {
     
     //呼叫login.php
     function login() {
+        
         $this->view("login");
     }
     

@@ -1,12 +1,4 @@
-<?php 
-if (isset($_GET["logout"]))
-{
-	setcookie("account", "Guest", time() - 3600);
-	header("Location: index.php");
-	exit();
-}
 
-?>
 <html>
     <head>
         <title>CBTwheels</title>

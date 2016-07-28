@@ -1,22 +1,25 @@
 <?php
 class loginController extends Controller{
     
-    function login(){
-       $this -> models("checkpwd") ; //呼叫models裡的checkpwd.php
-       
-       $result = $this->models("checkpwd");
-   
-       
-    	if (trim($account) != "")
-    	{
-    		$_SESSION("account", $account);
-    		if (isset($_SESSION["lastPage"]))
-    		  header(sprintf("Location: %s", $_SESSION["lastPage"]));
-    		else
-    		   header("Location: index");
-    		exit();
-    	}
+    //建立資料庫連接
+    function create_connection()    {
+        $link = mysqli_connect("localhost", "root", "") or die("無法建立資料連接: " . mysqli_connect_error());
+        mysqli_query($link, "SET NAMES utf8");
+        return $link;
     }
+    
+    
+    function execute_sql($link, $database, $sql)    {
+        mysqli_select_db($link, $database)or die("開啟資料庫失敗: " . mysqli_error($link));
+        $result = mysqli_query($link, $sql);
+        return $result;
+    }
+    
+    
+    
+    
+    
+    
     
 }
 
