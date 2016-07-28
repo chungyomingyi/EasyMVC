@@ -1,5 +1,3 @@
-
-
 <?php
 session_start();
 require_once("models/dbcontroller.php");
@@ -74,8 +72,7 @@ switch($_GET["action"]) {
 			<div class="txt-heading">購物車Shopping Cart <a id="btnEmpty" href="item?action=empty">清空購物車</a></div>
 			<?php
 			if(isset($_SESSION["cart_item"])){
-		    $item_total = 0;
-			?>	
+		    	$item_total = 0;	?>
 				<table cellpadding="10" cellspacing="1">
 					<tbody>
 						<tr>
@@ -101,27 +98,24 @@ switch($_GET["action"]) {
 						</tr>
 					</tbody>
 				</table>		
-			<?php
-			}
-			?>
+			<?php	}	?>
 		</div>
-			<div id="product-grid">
-				<div class="txt-heading">產品</div>
-				<?php
-				$product_array = $db_handle->runQuery("SELECT * FROM mvcproduct ");
-					//foreach迴圈撈資料庫並輸出
-					foreach($product_array as $key=>$value){
-				?>
-					<div class="product-item">
-						<form method="post" action="item?action=add&code=<?php echo $product_array[$key]["code"]; ?>">
-						<div class="product-image"><img src="<?php echo $product_array[$key]["image"]; ?>"></div>
-						<div><strong><?php echo $product_array[$key]["name"]; ?></strong></div>
-						<div class="product-price"><?php echo "$".$product_array[$key]["price"]; ?></div>
-						<div><input type="text" name="quantity" value="1" size="2" /><input type="submit" value="Add to cart" class="btnAddAction" /></div>
-						</form>
-					</div>
-				<?php	}	?>
-			</div>
+		<div id="product-grid">
+			<div class="txt-heading">產品</div>
+			<?php
+			$product_array = $db_handle->runQuery("SELECT * FROM mvcproduct ");
+				//foreach迴圈撈資料庫並輸出
+				foreach($product_array as $key=>$value)	{	?>
+				<div class="product-item">
+					<form method="post" action="item?action=add&code=<?php echo $product_array[$key]["code"]; ?>">
+					<div class="product-image"><img src="<?php echo $product_array[$key]["image"]; ?>"></div>
+					<div><strong><?php echo $product_array[$key]["name"]; ?></strong></div>
+					<div class="product-price"><?php echo "$".$product_array[$key]["price"]; ?></div>
+					<div><input type="text" name="quantity" value="1" size="2" /><input type="submit" value="Add to cart" class="btnAddAction" /></div>
+					</form>
+				</div>
+			<?php	}	?>
+		</div>
 	</div>
 </div>
 </BODY>

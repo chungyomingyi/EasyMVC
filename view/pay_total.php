@@ -10,9 +10,9 @@
 		<div class="header_top-sec">
 			<div class="top_right">
 				<ul>
-					<li><a href="contact.php">Contact</a></li>|
+					<li><a href="contact">Contact</a></li>|
 					<?php if ($account == "Guest"): ?>
-					<li><a href="login.php">Login</a></li>
+					<li><a href="login">Login</a></li>
 					<?php else: ?>
 					<li><a href="login.php?logout=1"><?php echo $account ?> logout</a></li>
 					<?php endif; ?>	

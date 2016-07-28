@@ -47,11 +47,7 @@ class HomeController extends Controller {
     }
     
    
-    //呼叫model裡的checkpwd並回傳比對的資料
-    function checkpwd(){
-        $this->model();
-    }
-    
+   
     
   
 }
