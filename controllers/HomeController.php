@@ -30,9 +30,14 @@ class HomeController extends Controller {
         $this->view("contact",$data);
     }
     
+    //呼叫結帳頁
+    function pay_total(){
+        $data["account"] = $this -> session_login_out();
+        $this->view("pay_total",$data);
+    }
+    
     //呼叫login.php
     function login() {
-        
         $this->view("login");
     }
     
@@ -41,11 +46,7 @@ class HomeController extends Controller {
         $this->view("join");
     }
     
-    //呼叫head_data.php
-    function head_data(){
-        $this->view("head_data");
-    }
-    
+   
     //呼叫model裡的checkpwd並回傳比對的資料
     function checkpwd(){
         $this->model();

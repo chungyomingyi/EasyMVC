@@ -46,7 +46,7 @@ switch($_GET["action"]) {
 <HTML>
 <HEAD>
 <title>CBTwheels</title>
-<?php require_once("head_data.php"); ?>
+<?php require_once("views/head_data.php"); ?>
 </HEAD>
 <BODY>
 <div class="top_bg">
@@ -67,7 +67,7 @@ switch($_GET["action"]) {
 	</div>
 </div>
 <!--載入上層選項-->
-<?php require_once("menu_top.php"); ?>
+<?php require_once("views/menu_top.php"); ?>
 <div class="contact">
 	<div class="container">
 		<div id="shopping-cart">
@@ -108,7 +108,7 @@ switch($_GET["action"]) {
 			<div id="product-grid">
 				<div class="txt-heading">產品</div>
 				<?php
-				$product_array = $db_handle->runQuery("SELECT * FROM product ");
+				$product_array = $db_handle->runQuery("SELECT * FROM mvcproduct ");
 					//foreach迴圈撈資料庫並輸出
 					foreach($product_array as $key=>$value){
 				?>

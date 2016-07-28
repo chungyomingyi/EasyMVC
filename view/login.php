@@ -2,7 +2,7 @@
 <html>
     <head>
         <title>CBTwheels</title>
-<?php require_once("head_data.php"); ?>
+<?php require_once("views/head_data.php"); ?>
     </head>
     <body>
     <div class="top_bg">
@@ -18,9 +18,9 @@
 		</div>
 	</div>
 <!--載入上層選項-->
-<?php require_once("menu_top.php"); ?>
+<?php require_once("views/menu_top.php"); ?>
 <div class="login_sec">
-	 <div class="container">
+	<div class="container">
 		<div class="col-md-6 log">
              <form action="../login/login" method="post" name="myForm">
 				 <h5>帳號 userame:</h5>	
@@ -33,6 +33,6 @@
 		</div>
 	</div>
 </div>
-<?php require_once("menu_bottom.php"); ?>		 
+<?php require_once("views/menu_bottom.php"); ?>		 
 </body>
 </html>
