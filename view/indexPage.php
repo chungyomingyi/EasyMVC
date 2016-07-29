@@ -1,10 +1,9 @@
 <html>
 <head>
-<title>CBTwheels</title>
-<?php require_once("views/head_data.php"); ?>
+	<title>CBTwheels</title>
+	<?php require_once("views/head_data.php"); ?>
 </head>
-<body> 
-<!--header-->	
+<body> 	
 <div class="top_bg">
 	<div class="container">
 		<div class="header_top-sec">
