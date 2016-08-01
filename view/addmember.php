@@ -1,5 +1,5 @@
 <?php
-    require_once("dbtools.inc.php");
+    require_once("../models/dbtools.inc.php");
     
     //取得表單資料
     $account = $_POST["account"];
@@ -28,8 +28,7 @@
         mysqli_free_result($result);
         
         //顯示訊息要求使用者更換帳號名稱
-        echo "<script type='text/javascript'>";
-        echo "alert('您所指定的帳號已經有人使用，請使用其它帳號');";
+        echo "<script type='text/javascript'>alert('您所指定的帳號已經有人使用，請使用其它帳號');";
         echo "history.back();";
         echo "</script>";
         }else { //如果帳號沒人使用
@@ -37,16 +36,12 @@
         mysqli_free_result($result);
         
         //執行 SQL 命令，新增此帳號
-        $sql = "INSERT INTO users (account, password, name, sex, 
-        year, month, day, telephone, cellphone, address,
-        email, url, comment) VALUES ('$account', '$password', 
-        '$name', '$sex', $year, $month, $day, '$telephone', 
+        $sql = "INSERT INTO users (`account`, `password`, `name`, `sex`,`year`, `month`, `day`, `telephone`, `cellphone`, `address`,
+        `email`, `url`, `comment`) VALUES ('$account', '$password','$name', '$sex', $year, $month, $day, '$telephone', 
         '$cellphone', '$address', '$email', '$url', '$comment')";
-        
         $result = execute_sql($link, "member", $sql);
     }
-
-//關閉資料連接	
+    //關閉資料連接	
     mysqli_close($link);
 ?>
 <html>

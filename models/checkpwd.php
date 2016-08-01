@@ -22,13 +22,10 @@
             mysqli_close($link);
             //將使用者資料加入 SESSION
             $_SESSION["account"] = $account;
-            // echo "<script type='text/javascript'>";
-            // echo "alert('登入成功');";
-            //echo "history.back();";
-            // echo "</script>";
-            
-            // header("location:index");		
+            echo "<script type='text/javascript'>alert('登入成功');history.back();</script>";
+            		
             return $_SESSION["account"]; 
+            header("location:index");
         }
     }
 ?>
