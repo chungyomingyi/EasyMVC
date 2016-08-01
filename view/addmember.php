@@ -1,5 +1,5 @@
 <?php
-    require_once("../models/dbtools.inc.php");
+    require_once("models/dbtools.inc.php");
     
     //取得表單資料
     $account = $_POST["account"];
