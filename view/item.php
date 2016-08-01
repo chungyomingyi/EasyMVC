@@ -85,7 +85,13 @@
 						<?php foreach ($_SESSION["cart_item"] as $item){?>
 									<tr>
 									<td><strong><?php echo $item["name"]; ?></strong></td>
-									<td><?php echo $item["quantity"]; ?></td>
+									<td><?php if( $item["quantity"]<50){
+										echo $item["quantity"];
+									}else{
+										echo "<script type='text/javascript'>alert('數量有誤，請重新輸入');</script>";
+									}
+									?>
+									</td>
 									<td></td>
 									<td align=right><?php echo "$".$item["price"]; ?></td>
 									<td></td>

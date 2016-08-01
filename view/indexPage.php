@@ -11,10 +11,10 @@
 			<div class="top_right">
 				<ul>
 					<li><a href="contact">Contact</a></li>|
-					<?php if ($data["account"] == "Guest"): ?>
+					<?php if ($data == "Guest"): ?>
 					<li><a href="login">Login</a></li>
 					<?php else: ?>
-					<li><a href="login?logout=1"><?php echo $data["account"]  ?> logout</a></li>
+					<li><a href="login?logout=1"><?php echo $data  ?> logout</a></li>
 					<?php endif; ?>
 				</ul>
 			</

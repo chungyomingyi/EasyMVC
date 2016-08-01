@@ -1,9 +1,12 @@
 <?php
     
     function checkpwd(){
-    //檢查帳號密碼是否正確
+        require_once("dbtools.php");
+        
+        //檢查帳號密碼是否正確
+        $link = create_connection();
         $sql = "SELECT * FROM users Where account = '$account' AND password = '$password'";
-        return $sql;
+        $result = execute_sql($link, "member", $sql);
         
         //如果帳號密碼錯誤
         if (mysqli_num_rows($result) == 0){
@@ -25,7 +28,7 @@
             echo "<script type='text/javascript'>alert('登入成功');history.back();</script>";
             		
             return $_SESSION["account"]; 
-            header("location:index");
+           // header("location:index");
         }
     }
 ?>
