@@ -1,6 +1,6 @@
 <?php
     
-    function checkidpwd(){
+    function checkpwd(){
     //檢查帳號密碼是否正確
         $sql = "SELECT * FROM users Where account = '$account' AND password = '$password'";
         return $sql;

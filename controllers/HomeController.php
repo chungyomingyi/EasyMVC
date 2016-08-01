@@ -47,8 +47,8 @@ class HomeController extends Controller {
         $this->view("join");
     }
     
-   
-   
+    
+    
     
   
 }

@@ -36,9 +36,8 @@
         mysqli_free_result($result);
         
         //執行 SQL 命令，新增此帳號
-        $sql = "INSERT INTO users (`account`, `password`, `name`, `sex`,`year`, `month`, `day`, `telephone`, `cellphone`, `address`,
-        `email`, `url`, `comment`) VALUES ('$account', '$password','$name', '$sex', $year, $month, $day, '$telephone', 
-        '$cellphone', '$address', '$email', '$url', '$comment')";
+        $sql = "INSERT INTO users (`account`, `password`, `name`, `sex`,`year`, `month`, `day`, `telephone`, `cellphone`, `address`,`email`, `url`, `comment`) 
+        VALUES ('$account', '$password','$name', '$sex', $year, $month, $day, '$telephone', '$cellphone', '$address', '$email', '$url', '$comment')";
         $result = execute_sql($link, "member", $sql);
     }
     //關閉資料連接	
