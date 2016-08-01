@@ -12,10 +12,7 @@
             //關閉資料連接	
             mysqli_close($link);
             //顯示訊息要求使用者輸入正確的帳號密碼
-            echo "<script type='text/javascript'>";
-            echo "alert('帳號密碼錯誤，請查明後再登入');";
-            echo "history.back();";
-            echo "</script>";
+            echo "<script type='text/javascript'>alert('帳號密碼錯誤，請查明後再登入');history.back();</script>";
         }else{  //如果帳號密碼正確
             //取得 id 欄位
             $account = mysqli_fetch_object($result)->account;

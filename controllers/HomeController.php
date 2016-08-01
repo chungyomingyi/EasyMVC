@@ -1,5 +1,6 @@
 <?php
 class HomeController extends Controller {
+    
     //判斷登入/登出
     function session_login_out(){
         if(isset($_SESSION["account"])){
