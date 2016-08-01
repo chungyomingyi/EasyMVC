@@ -10,7 +10,7 @@
  - 統一使用 `require_once`
  - 一個檔案只能定義一個class
  - `require_once` 的檔案只能是 class 或 function 集合 (設定檔除外)
- - SQL 語法使用大寫，欄位、database、table都加入 "\`" 如: 
+ - SQL 語法使用大寫，欄位、database、table都加入 "\`" 如:  (ok)
  
 ```
 SELECT * FROM `table` WHERE `id` = '1'
