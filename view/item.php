@@ -94,8 +94,7 @@
 										echo $item["quantity"];
 									}else{
 										echo "<script type='text/javascript'>alert('數量有誤，請重新輸入');</script>";
-									}
-									?>
+									}	?>
 									</td>
 									<td></td>
 									<td align=right><?php echo "$".$item["price"]; ?></td>
@@ -113,9 +112,8 @@
 			</div>
 			<div id="product-grid">
 				<div class="txt-heading">產品</div>
-				<?php
-				$product_array = $db_handle->runQuery("SELECT * FROM mvcproduct ");
-					//foreach迴圈撈資料庫並輸出
+				<?php$product_array = $db_handle->runQuery("SELECT * FROM mvcproduct "); //從資料庫撈資料
+					//用foreach迴圈將撈出的資料顯示出來
 					foreach($product_array as $key=>$value)	{	?>
 					<div class="product-item">
 						<form method="post" action="item?action=add&code=<?php echo $product_array[$key]["code"]; ?>">

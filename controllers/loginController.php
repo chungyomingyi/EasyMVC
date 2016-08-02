@@ -9,9 +9,9 @@ class loginController extends Controller{
         $getaccount = $_POST["account"]; 	
         $getpassword = $_POST["password"];
         
-        $account = $this->models("checkpwd"); //呼叫models/checkpwd的類別裡的方法
+        $account = $this->models("checkpwd"); //先呼叫models/checkpwd的類別裡的方法
         
-        $account->getuser($getaccount, $getpassword);
+        $account->getuser($getaccount, $getpassword);//再將$getaccount，$getpassword放進models/checkpwd.php裡的getuser方法
         
         return $account;
         

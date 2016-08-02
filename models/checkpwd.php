@@ -3,7 +3,7 @@
 class checkpwd{
         
     function getuser($account, $password){
-        require_once("dbtools.php");
+        require_once("dbtools.inc.php");
         
         //檢查帳號密碼是否正確
         $link = create_connection();
@@ -17,7 +17,9 @@ class checkpwd{
             //關閉資料連接	
             mysqli_close($link);
             //顯示訊息要求使用者輸入正確的帳號密碼
-            echo "<script type='text/javascript'>alert('帳號密碼錯誤，請查明後再登入');history.back();</script>";
+            // return $false;
+            $data = "<script type='text/javascript'>alert('帳號密碼錯誤，請查明後再登入');history.back();</script>";
+            return $data;
         }else{  //如果帳號密碼正確
             //取得 id 欄位
             $account = mysqli_fetch_object($result)->account;

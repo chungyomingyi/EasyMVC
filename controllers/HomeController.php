@@ -8,8 +8,8 @@ class HomeController extends Controller {
         }else{
             $account = "Guest";
         }
-        $data = $account;
-        return $data;
+        
+        return $account;
         
     }
     
