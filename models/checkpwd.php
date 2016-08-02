@@ -1,6 +1,8 @@
 <?php
-    
-    function checkpwd(){
+
+class checkpwd{
+        
+    function getuser($account, $password){
         require_once("dbtools.php");
         
         //檢查帳號密碼是否正確
@@ -28,7 +30,8 @@
             echo "<script type='text/javascript'>alert('登入成功');history.back();</script>";
             		
             return $_SESSION["account"]; 
-           // header("location:index");
+            header("location:index");
         }
     }
+}
 ?>

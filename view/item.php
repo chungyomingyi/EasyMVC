@@ -7,9 +7,14 @@
 	if(!empty($_GET["action"])) {
 		switch($_GET["action"]) {
 			case "add":   //新增
-				if(!empty($_POST["quantity"])) {
+				if(!empty($_POST["quantity"])) {//數量有值才去資料庫撈物品資料(以code欄位為依據)
+					//撈資料庫裡code欄位的資料
 					$productByCode = $db_handle->runQuery("SELECT * FROM product WHERE code='" . $_GET["code"] . "'");
-					$itemArray = array($productByCode[0]["code"]=>array('name'=>$productByCode[0]["name"], 'code'=>$productByCode[0]["code"], 'quantity'=>$_POST["quantity"], 'price'=>$productByCode[0]["price"]));
+					//將資料丟入$itemArray
+					$itemArray = array($productByCode[0]["code"]=>array('name'=>$productByCode[0]["name"], 
+																		'code'=>$productByCode[0]["code"], 
+																		'quantity'=>$_POST["quantity"], 
+																		'price'=>$productByCode[0]["price"]));
 					
 					if(!empty($_SESSION["cart_item"])) {
 						if(in_array($productByCode[0]["code"],$_SESSION["cart_item"])) {
