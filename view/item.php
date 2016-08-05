@@ -22,12 +22,10 @@
 									if($productByCode[0]["code"] == $k)
 										$_SESSION["cart_item"][$k]["quantity"] = $_POST["quantity"];
 							}
-						} else {
+						} else 
 							$_SESSION["cart_item"] = array_merge($_SESSION["cart_item"],$itemArray);
-						}
-					} else {
+					} else 
 						$_SESSION["cart_item"] = $itemArray;
-					}
 				}
 			break;		
 			case "remove"://刪除
@@ -52,25 +50,25 @@
 	<?php require_once("views/head_data.php"); ?>
 </HEAD>
 <BODY>
-<div class="top_bg">
-	<div class="container">
-		<div class="header_top-sec">
-			<div class="top_right">
-				<ul>
-					<li><a href="contact">Contact</a></li>|
-					<?php if ($data["account"] == "Guest"): ?>
-					<li><a href="login">Login</a></li>
-					<?php else: ?>
-					<li><a href="login?logout=1"><?php echo $data["account"] ?> logout</a></li>
-					<?php endif; ?>
-				</ul>
+	<div class="top_bg">
+		<div class="container">
+			<div class="header_top-sec">
+				<div class="top_right">
+					<ul>
+						<li><a href="contact">Contact</a></li>|
+						<?php if ($data["account"] == "Guest"): ?>
+						<li><a href="login">Login</a></li>
+						<?php else: ?>
+						<li><a href="login?logout=1"><?php echo $data["account"] ?> logout</a></li>
+						<?php endif; ?>
+					</ul>
+				</div>
+					<div class="clearfix"> </div>
 			</div>
-				<div class="clearfix"> </div>
 		</div>
 	</div>
-</div>
-<!--載入上層選項-->
-<?php require_once("views/menu_top.php"); ?>
+	<!--載入上層選項-->
+	<?php require_once("views/menu_top.php"); ?>
 	<div class="contact">
 		<div class="container">
 			<div id="shopping-cart">
@@ -112,7 +110,8 @@
 			</div>
 			<div id="product-grid">
 				<div class="txt-heading">產品</div>
-				<?php$product_array = $db_handle->runQuery("SELECT * FROM mvcproduct "); //從資料庫撈資料
+				<?php
+					$product_array = $db_handle->runQuery("SELECT * FROM mvcproduct "); //從資料庫撈資料
 					//用foreach迴圈將撈出的資料顯示出來
 					foreach($product_array as $key=>$value)	{	?>
 					<div class="product-item">

@@ -1,11 +1,9 @@
 <?php
 
 class App {
-    // https://..../home/index.php
-    
     
     public function __construct() {
-        $url = $this->parseUrl();      //秀出陣列內容
+        $url = $this->parseUrl();      
         
         $controllerName = "{$url[0]}Controller";        
         if (!file_exists("controllers/$controllerName.php"))
@@ -19,10 +17,8 @@ class App {
         $params = $url ? array_values($url) : Array();
         call_user_func_array(Array($controller, $methodName), $params);
         
-        //homeController
     }
-    
-    public function parseUrl() {     //取得後面網址名稱
+    public function parseUrl() {     
         if (isset($_GET["url"])) {
             $url = rtrim($_GET["url"], "/");
             $url = explode("/", $url);

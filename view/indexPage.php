@@ -1,4 +1,3 @@
-<?php session_start() ?>
 <html>
 <head>
 	<title>CBTwheels</title>
@@ -14,7 +13,7 @@
 					<?php if ($data["account"] == "Guest"): ?>
 					<li><a href="login">Login</a></li>
 					<?php else: ?>
-					<li><a href="login?logout=1"><?php echo $data["account"]  ?> logout</a></li>
+					<li><a href="login?logout=1"><?php echo $data["account"]  ?> __logout</a></li>
 					<?php endif; ?>
 				</ul>
 			</
