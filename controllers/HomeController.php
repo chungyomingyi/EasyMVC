@@ -35,10 +35,7 @@ class HomeController extends Controller {
         $this->view("login");
     }
     
-    //呼叫join.php
-    // function join() {
-    //     $this->view("join");
-    // }
+    
     
     
     

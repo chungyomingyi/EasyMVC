@@ -1,15 +1,18 @@
 <?php
+require_once 'PDOdb.php';
 
 class CRUD{
     var $dbh;
     
     function __construct(){
-        $db_con = new DB_con();
-        $dbh = $db_con->db;
-        $this-> dbh= $dbh;  
+        // $db_con = new DB_con();
+        // $dbh = $db_con->db;
+        // $this-> dbh= $dbh;  
+        
+        $this -> dbh = new DB_con();
+        
     }
     
-}
     //新增會員
     public function create_member($account,$password,$name,$sex,$birthday,$telephone,$cellphone,$address,$email){
         $dbh = $this -> dbh;
@@ -24,8 +27,10 @@ class CRUD{
         $sth->bindParam(7, $cellphone);
         $sth->bindParam(8, $address);
         $sth->bindParam(9, $email);
-        $dbh = null;
-        return $sth->execute();	
+        // $dbh = null;
+        $sth->execute();	
+        echo "OK";
+        exit;
     }
     
     
@@ -51,10 +56,28 @@ class CRUD{
         
         if($account!=null && $password!=null && $name!=null && $bithday!=null){  //欄位不能為空
             if($row[1] == $id){  //驗証帳號是否重複
-                
+                $result["alert"] = "此帳號已使用";
+                $result["go"] = "join";
+                return $result;
+            }else{
+                $result["alert"] = "此帳號使用過了";
+                $result["go"] = "newMember";
+                return $result;
             }
+        }else{
+            $result["alert"] = "請輸入完整資料";
+            $result["go"] = join;
+            return $result;
         }
     }
+    
+    
+    
+    
+    
+    
+}
+    
     
     
 

@@ -1,3 +1,8 @@
+<?php 
+if($data["alert"])
+echo "<script language='javascript'> alert('{$data['alert']}'); </script>";
+?>
+
 <html>
 <head>
     <title>CBTwheels</title>
@@ -23,7 +28,7 @@
                 <h2 align="center">新帳號註冊 <span> create an account </span></h2>
                 <h3 align="center">請填入下列資料 <span>(標示「*」欄位請務必填寫)</span></h1>
                     <div class="registration_form">
-                        <form action="Login/register" method="post" name="myForm">
+                        <form action="../Login/register" method="post" name="myForm">
                             <table border="2" align="center" bordercolor="#6666FF">
                                 <tr bgcolor="#00a0dc"> 
                                     <td align="right"><font color="#ffffff">*使用者帳號：</font></td>

@@ -21,13 +21,13 @@
 	<div class="login_sec">
 		<div class="container">
 			<div class="col-md-6 log">
-	             <form action="../login/checkpwd" method="post" name="myForm">
+	             <form action="../Login/checkpwd" method="post" name="myForm">
 					 <h5>帳號 userame:</h5>	
 					 	<input placeholder="名字 username:" type="text" id="account" name="account">
 					 <h5>密碼 password:</h5>
 						<input placeholder="密碼 password" type="password" id="password" name="password">
 						<input type="submit" name="btnOK" value="Login">
-	  			     	<a class="acount-btn" href="join">Create an Account</a>
+	  			     	<a class="acount-btn" href="../Login/join">Create an Account</a>
 				 </form>
 			</div>
 		</div>

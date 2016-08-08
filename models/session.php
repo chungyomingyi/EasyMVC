@@ -12,12 +12,7 @@ class session {
         return $account;
     }
     
-    //判斷導頁
-    function cookieDirect(){
-        
-    }
-    
-    
+   
 }
 
 ?>

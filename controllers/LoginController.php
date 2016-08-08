@@ -9,15 +9,12 @@ class LoginController extends Controller{
     }
     
     function checkpwd(){
-        require_once("models/dbtools.inc.php");
+        // require_once("models/dbtools.inc.php");
         //取得表單資料
         $getaccount = $_POST["account"]; 	
         $getpassword = $_POST["password"];
-        
         $account = $this->models("checkpwd"); //先呼叫models/checkpwd的類別裡的方法
-        
         $account->getuser($getaccount, $getpassword);//再將$getaccount，$getpassword放進models/checkpwd.php裡的getuser方法
-        
         return $account;
         
     }
@@ -29,9 +26,22 @@ class LoginController extends Controller{
         $this->view("join",$data);
     }
     
+    //接收views/join.php 註冊from裡submit之後接收輸入欄裡的資料
     function register(){
+            
+            // $account = $_PSOT['account'];
+            // $password = $_PSOT['password'];
+            // $name = $_PSOT['name'];
+            // $sex = $_PSOT['sex'];
+            // $birthday = $_PSOT['birthday'];
+            // $telephone = $_PSOT['telephone'];
+            // $cellphone = $_PSOT['cellphone'];
+            // $address = $_PSOT['address'];
+            // $email = $_PSOT['email'];
+        
         if(isset($_POST["register"])){
             $session = $this -> model("session");
+            $session->create_member($account,$password,$name,$sex,$birthday,$telephone,$cellphone,$address,$email);
             $data['account'] = $session -> login_out();
             $registerID = $this -> model("crud");
             
@@ -46,7 +56,16 @@ class LoginController extends Controller{
             $data['address'] = $_POST['address'];
             $data['email'] = $_POST['email'];
             
-            $result = $registerID -> select_member_check();
+            //將輸入的資料轉到crud/select_member_check
+            $result = $registerID -> select_member_check($data['account'],$data['password'],$data['name'],$data['sex'],$data['birthday'],
+                                                        $data['telephone'], $data['cellphone'],$data['address'],$data['email']);
+            $dataGo= $result["go"];
+            if($result["login"]=="OK"){   //註冊成功後進首頁顯示註冊成功
+        	    $this->view("$dataGo",$result);
+        	}
+        	elseif($result){               //登入失敗傳回執並顯示訊息
+        	    $this->view("$dataGo",$result);
+        	}
         }
     }
     
